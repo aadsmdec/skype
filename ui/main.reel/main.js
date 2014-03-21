@@ -12,6 +12,11 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     constructor: {
         value: function Main() {
             this.super();
+            
+            this._userController = {
+                displayName: "Afonso",
+                credits: 5
+            };
         }
     }
 });

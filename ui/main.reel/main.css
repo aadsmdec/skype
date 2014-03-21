@@ -5,14 +5,14 @@
     left: 0;
     top: 0;
     right: 0;
-    bottom: 100px;
+    height: 100px;
 }
 
 .Main-sidebar {
     position: absolute;
     left: 0;
     top: 100px;
-    right: 400px;
+    width: 400px;
     bottom: 0;
 }
 

@@ -32,7 +32,10 @@
             }
         },
         "recentController": {
-            "prototype": "montage/core/range-controller"
+            "prototype": "montage/core/range-controller",
+            "bindings": {
+                "content": {"<-": "@owner.recentConversations"}
+            }
         },
         "recentList": {
             "prototype": "digit/ui/list.reel",

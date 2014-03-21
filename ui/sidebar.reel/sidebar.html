@@ -9,12 +9,34 @@
             "properties": {
                 "element": {"#": "owner"}
             }
+        },
+        "recentController": {
+            "prototype": "montage/core/range-controller"
+        },
+        "recentList": {
+            "prototype": "digit/ui/list.reel",
+            "properties": {
+                "element": {"#": "recentList"}
+            }
+        },
+        "recentTitle": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "recentTitle"},
+                "value": "Recent"
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="owner" class="Sidebar">
+        <h1 data-montage-id="recentTitle"></h1>
+        <ul data-montage-id="recentList">
+            <li>
+                Item
+            </li>
+        </ul>
     </div>
 </body>
 </html>

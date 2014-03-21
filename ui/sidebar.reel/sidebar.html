@@ -10,6 +10,27 @@
                 "element": {"#": "owner"}
             }
         },
+        "contactsLabel": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "contactsLabel"},
+                "value": "Contacts"
+            }
+        },
+        "historyLabel": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "historyLabel"},
+                "value": "History"
+            }
+        },
+        "homeLabel": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "homeLabel"},
+                "value": "Skype Home"
+            }
+        },
         "recentController": {
             "prototype": "montage/core/range-controller"
         },
@@ -32,12 +53,15 @@
 </head>
 <body>
     <div data-montage-id="owner" class="Sidebar">
+        <p data-montage-id="homeLabel"></p>
+        <p data-montage-id="contactsLabel"></p>
         <h1 data-montage-id="recentTitle"></h1>
         <ul data-montage-id="recentList">
             <li>
                 Item
             </li>
         </ul>
+        <p data-montage-id="historyLabel"></p>
     </div>
 </body>
 </html>

@@ -10,13 +10,37 @@
       }
     }
   },
+  "blueprint_unnamed_recentConversations": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "recentConversations",
+      "blueprint": {"@": "root"},
+      "cardinality": -1,
+      "valueType": "object"
+    }
+  },
+  "blueprint_unnamed_selectedItem": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "selectedItem",
+      "blueprint": {"@": "root"},
+      "valueType": "object"
+    }
+  },
   "root": {
     "prototype": "montage/core/meta/module-blueprint",
     "properties": {
       "name": null,
       "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_recentConversations"},
+        {"@": "blueprint_unnamed_selectedItem"}
+      ],
       "propertyBlueprintGroups": {
-        "Sidebar": []
+        "Sidebar": [
+          {"@": "blueprint_unnamed_recentConversations"},
+          {"@": "blueprint_unnamed_selectedItem"}
+        ]
       },
       "module": {
         "%": "ui/sidebar.reel"

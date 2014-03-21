@@ -8,14 +8,7 @@
         "owner": {
             "properties": {
                 "element": {"#": "owner"}
-            },
-            "listeners": [
-                {
-                    "type": "action",
-                    "useCapture": false,
-                    "listener": {"@": "newMessage"}
-                }
-            ]
+            }
         },
         "conversationController": {
             "prototype": "montage/core/range-controller",
@@ -45,7 +38,14 @@
             "properties": {
                 "element": {"#": "newMessage"},
                 "placeholderValue": "Text"
-            }
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
         },
         "source": {
             "prototype": "digit/ui/text.reel",

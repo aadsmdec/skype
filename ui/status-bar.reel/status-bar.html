@@ -38,6 +38,13 @@
                 "src": {"<-": "@owner.userController.profileImageSrc"}
             }
         },
+        "search": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "search"},
+                "placeholderValue": "Text"
+            }
+        },
         "statusImage": {
             "prototype": "digit/ui/image.reel",
             "properties": {
@@ -56,6 +63,7 @@
         <img data-montage-id="statusImage">
         <h1 data-montage-id="displayName"></h1>
         <button data-montage-id="callPhoneButton"></button>
+        <input data-montage-id="search" type="text">
     </div>
 </body>
 </html>

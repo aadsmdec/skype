@@ -10,6 +10,16 @@
                 "element": {"#": "owner"}
             }
         },
+        "displayName": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "displayName"},
+                "value": ""
+            },
+            "bindings": {
+                "value": {"<-": "@owner.userController.displayName"}
+            }
+        },
         "profileImage": {
             "prototype": "digit/ui/image.reel",
             "properties": {
@@ -28,16 +38,6 @@
             "_dev": {
                 "comment": "Replace this component with the statusIcon in the future (will be developed by external contractor)"
             }
-        },
-        "title": {
-            "prototype": "digit/ui/title.reel",
-            "properties": {
-                "element": {"#": "title"},
-                "value": ""
-            },
-            "bindings": {
-                "value": {"<-": "@owner.userController.displayName"}
-            }
         }
     }
     </script>
@@ -46,7 +46,7 @@
     <div data-montage-id="owner" class="StatusBar">
         <img data-montage-id="profileImage">
         <img data-montage-id="statusImage">
-        <h1 data-montage-id="title"></h1>
+        <h1 data-montage-id="displayName"></h1>
     </div>
 </body>
 </html>

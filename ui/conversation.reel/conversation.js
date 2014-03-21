@@ -13,5 +13,13 @@ exports.Conversation = Component.specialize(/** @lends Conversation# */ {
         value: function Conversation() {
             this.super();
         }
+    },
+    
+    handleNewMessageAction: {
+        value: function(event) {
+            var value = event.target.value;
+            
+            this.conversation.conversion.push({source: "Me", message: value});
+        }
     }
 });

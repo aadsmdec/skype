@@ -8,7 +8,14 @@
         "owner": {
             "properties": {
                 "element": {"#": "owner"}
-            }
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "newMessage"}
+                }
+            ]
         },
         "conversationController": {
             "prototype": "montage/core/range-controller",
@@ -33,6 +40,13 @@
                 "contentController": {"@": "conversationController"}
             }
         },
+        "newMessage": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "newMessage"},
+                "placeholderValue": "Text"
+            }
+        },
         "source": {
             "prototype": "digit/ui/text.reel",
             "properties": {
@@ -42,18 +56,30 @@
             "bindings": {
                 "value": {"<-": "@messages:iteration.object.source + ': '"}
             }
+        },
+        "title": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Title"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.conversation.name"}
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="owner" class="Conversation">
+        <h1 data-montage-id="title"></h1>
         <ul data-montage-id="messages">
             <li>
                 <p data-montage-id="source"></p>
                 <p data-montage-id="message"></p>
             </li>
         </ul>
+        <input data-montage-id="newMessage" type="text">
     </div>
 </body>
 </html>

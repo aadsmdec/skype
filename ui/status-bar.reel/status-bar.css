@@ -4,5 +4,6 @@
 
 .StatusBar-leftSide {
     position: absolute;
-    left: 0;
+    right: 10px;
+    top: 30px;
 }

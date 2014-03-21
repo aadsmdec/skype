@@ -9,12 +9,30 @@
             "properties": {
                 "element": {"#": "owner"}
             }
+        },
+        "conversationController": {
+            "prototype": "montage/core/range-controller",
+            "bindings": {
+                "content": {"<-": "@owner.conversation"}
+            }
+        },
+        "messages": {
+            "prototype": "digit/ui/list.reel",
+            "properties": {
+                "element": {"#": "messages"},
+                "contentController": {"@": "conversationController"}
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="owner" class="Conversation">
+        <ul data-montage-id="messages">
+            <li>
+                Item
+            </li>
+        </ul>
     </div>
 </body>
 </html>

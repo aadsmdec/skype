@@ -13,7 +13,17 @@
         "conversationController": {
             "prototype": "montage/core/range-controller",
             "bindings": {
-                "content": {"<-": "@owner.conversation"}
+                "content": {"<-": "@owner.conversation.conversion"}
+            }
+        },
+        "message": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "message"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@messages:iteration.object.message"}
             }
         },
         "messages": {
@@ -21,6 +31,16 @@
             "properties": {
                 "element": {"#": "messages"},
                 "contentController": {"@": "conversationController"}
+            }
+        },
+        "source": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "source"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@messages:iteration.object.source + ': '"}
             }
         }
     }
@@ -31,6 +51,8 @@
         <ul data-montage-id="messages">
             <li>
                 Item
+                <p data-montage-id="source"></p>
+                <p data-montage-id="message"></p>
             </li>
         </ul>
     </div>

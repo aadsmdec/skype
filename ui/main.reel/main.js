@@ -20,13 +20,13 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             
             this._recentConversations = [
                 {name: "Adam", conversion: [
-                    {source: "Adam", date: "12:23", message: "lskjdf lksdjf lskjdf lsdkjf "},
-                    {source: "Adam", date: "12:23", message: "slkdjhf lksjdhf lksjhd flkjsdf"},
-                    {source: "Adam", date: "12:23", message: "lkdfjg ldkfgjldkfj glkdfj glfd g"}]},
+                    {source: "Adam", date: "12:23", message: "Hello there"},
+                    {source: "Adam", date: "12:23", message: "How are you?"},
+                    {source: "Adam", date: "12:23", message: "Wanna go to the movies?}]},
                 {name: "Channel", conversion: [
-                    {source: "Adam", date: "12:23", message: "lskjdf lksdjf lskjdf lsdkjf "},
-                    {source: "Anne", date: "13:23", message: "slkdjhf lksjdhf lksjhd flkjsdf"},
-                    {source: "Heidi", date: "16:45", message: "lkdfjg ldkfgjldkfj glkdfj glfd g"}]}
+                    {source: "Adam", date: "12:23", message: "Hello everyone"},
+                    {source: "Anne", date: "13:23", message: "Sup?"},
+                    {source: "Heidi", date: "16:45", message: "Everything is awesome"}]}
             ];
         }
     }

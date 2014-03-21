@@ -9,12 +9,30 @@
             "properties": {
                 "element": {"#": "owner"}
             }
+        },
+        "profileImage": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "profileImage"},
+                "crossOrigin": null
+            }
+        },
+        "statusImage": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "statusImage"}
+            },
+            "_dev": {
+                "comment": "Replace this component with the statusIcon in the future (will be developed by external contractor)"
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="owner" class="StatusBar">
+        <img data-montage-id="profileImage">
+        <img data-montage-id="statusImage">
     </div>
 </body>
 </html>

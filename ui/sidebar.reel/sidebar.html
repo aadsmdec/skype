@@ -8,6 +8,9 @@
         "owner": {
             "properties": {
                 "element": {"#": "owner"}
+            },
+            "bindings": {
+                "selectedItem": {"<->": "@recentController.selection.0"}
             }
         },
         "contactsLabel": {
@@ -15,6 +18,16 @@
             "properties": {
                 "element": {"#": "contactsLabel"},
                 "value": "Contacts"
+            }
+        },
+        "conversationName": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "conversationName"},
+                "value": "conversationName"
+            },
+            "bindings": {
+                "value": {"<-": "@recentList:iteration.object.name"}
             }
         },
         "historyLabel": {
@@ -41,7 +54,8 @@
             "prototype": "digit/ui/list.reel",
             "properties": {
                 "element": {"#": "recentList"},
-                "contentController": {"@": "recentController"}
+                "contentController": {"@": "recentController"},
+                "isSelectionEnabled": true
             }
         },
         "recentTitle": {
@@ -49,13 +63,6 @@
             "properties": {
                 "element": {"#": "recentTitle"},
                 "value": "Recent"
-            }
-        },
-        "text1": {
-            "prototype": "digit/ui/text.reel",
-            "properties": {
-                "element": {"#": "text1"},
-                "value": "Text"
             }
         }
     }
@@ -67,7 +74,7 @@
         <p data-montage-id="contactsLabel"></p>
         <h1 data-montage-id="recentTitle"></h1>
         <ul data-montage-id="recentList">
-            <li data-montage-id="text1">
+            <li data-montage-id="conversationName">
                 Item
             </li>
         </ul>

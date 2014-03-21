@@ -15,7 +15,7 @@ exports.Conversation = Component.specialize(/** @lends Conversation# */ {
         }
     },
     
-    handleNewMessageAction: {
+    handleAction: {
         value: function(event) {
             var value = event.target.value;
             

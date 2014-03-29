@@ -1,0 +1,43 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_conversation": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "conversation",
+      "blueprint": {"@": "root"},
+      "valueType": "object"
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "blueprintModule": {
+        "%": "ui/conversation.reel/conversation.meta"
+      },
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_conversation"}
+      ],
+      "propertyBlueprintGroups": {
+        "Conversation": [
+          {"@": "blueprint_unnamed_conversation"}
+        ]
+      },
+      "module": {
+        "%": "ui/conversation.reel"
+      },
+      "exportName": "Conversation"
+    }
+  }
+}

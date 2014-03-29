@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="conversation.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+        "conversationController": {
+            "prototype": "montage/core/range-controller",
+            "bindings": {
+                "content": {"<-": "@owner.conversation.conversion"}
+            }
+        },
+        "message": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "message"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@messages:iteration.object.message"}
+            }
+        },
+        "messages": {
+            "prototype": "digit/ui/list.reel",
+            "properties": {
+                "element": {"#": "messages"},
+                "contentController": {"@": "conversationController"}
+            }
+        },
+        "newMessage": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "newMessage"},
+                "placeholderValue": "Text"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "source": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "source"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@messages:iteration.object.source + ': '"}
+            }
+        },
+        "title": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "Title"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.conversation.name"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Conversation">
+        <h1 data-montage-id="title"></h1>
+        <ul data-montage-id="messages">
+            <li>
+                <p data-montage-id="source"></p>
+                <p data-montage-id="message"></p>
+            </li>
+        </ul>
+        <input data-montage-id="newMessage" type="text">
+    </div>
+</body>
+</html>

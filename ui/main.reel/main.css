@@ -1,1 +1,31 @@
 .Main {}
+
+.Main-statusBar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100px;
+}
+
+.Main-sidebar {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 400px;
+    bottom: 0;
+}
+
+.Main-conversation {
+    position: absolute;
+    left: 400px;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+}
+
+.Main-statusBar,
+.Main-sidebar,
+.Main-conversation {
+    border: 1px solid black;
+}

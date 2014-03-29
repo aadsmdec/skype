@@ -1,0 +1,9 @@
+.StatusBar {
+
+}
+
+.StatusBar-leftSide {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+}

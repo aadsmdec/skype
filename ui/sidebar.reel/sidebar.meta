@@ -27,19 +27,43 @@
       "valueType": "object"
     }
   },
+  "blueprint_unnamed_anItem": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "anItem",
+      "blueprint": {"@": "root"},
+      "valueType": "object"
+    }
+  },
+  "blueprint_unnamed_multipleItems": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "multipleItems",
+      "blueprint": {"@": "root"},
+      "cardinality": -1,
+      "valueType": "object"
+    }
+  },
   "root": {
     "prototype": "montage/core/meta/module-blueprint",
     "properties": {
       "name": null,
+      "blueprintModule": {
+        "%": "ui/sidebar.reel/sidebar.meta"
+      },
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprints": [
         {"@": "blueprint_unnamed_recentConversations"},
-        {"@": "blueprint_unnamed_selectedItem"}
+        {"@": "blueprint_unnamed_selectedItem"},
+        {"@": "blueprint_unnamed_anItem"},
+        {"@": "blueprint_unnamed_multipleItems"}
       ],
       "propertyBlueprintGroups": {
         "Sidebar": [
           {"@": "blueprint_unnamed_recentConversations"},
-          {"@": "blueprint_unnamed_selectedItem"}
+          {"@": "blueprint_unnamed_selectedItem"},
+          {"@": "blueprint_unnamed_anItem"},
+          {"@": "blueprint_unnamed_multipleItems"}
         ]
       },
       "module": {
